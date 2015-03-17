@@ -1,23 +1,12 @@
-Template.hello.helpers({
-    counter: function() {
-        return Session.get('counter');
-    }
-});
-
-Template.hello.events({
-    'click button': function() {
-        // increment the counter when button is clicked
-        Session.set('counter', Session.get('counter') + 1);
-    }
-});
-
-Template.hello.rendered = function() {
+Template.charts.rendered = function() {
     // Get the context of the canvas element we want to select
     var ctx  = document.getElementById("myChart").getContext("2d");
     var ctx2 = document.getElementById("myChart2").getContext("2d");
     var ctx3 = document.getElementById("myChart3").getContext("2d");
     var ctx4 = document.getElementById("myChart4").getContext("2d");
     var ctx5 = document.getElementById("myChart5").getContext("2d");
+
+    // Set the options
     var options = {
 
         ///Boolean - Whether grid lines are shown across the chart
@@ -123,6 +112,8 @@ Template.hello.rendered = function() {
         legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 
     }
+
+    // Set the data
     var data = {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
@@ -215,8 +206,9 @@ Template.hello.rendered = function() {
         highlight: "#FFC870",
         label: "Yellow"
     }
-]
+    ]
 
+    // draw the charts
     var myLineChart = new Chart(ctx).Line(data, options);
     var myRadarChart = new Chart(ctx2).Radar(data2, options2);
     var myPolarArea = new Chart(ctx3).PolarArea(data3, {
