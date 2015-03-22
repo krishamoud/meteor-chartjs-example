@@ -231,7 +231,6 @@ Template.moreCharts.onRendered(function() {
     var rand1 = random();
     var rand2 = random();
     var rand3 = random();
-    console.log(rand1, rand2, rand3);
     var data = [
     {
         value: rand1,
