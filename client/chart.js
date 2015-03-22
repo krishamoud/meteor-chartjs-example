@@ -160,22 +160,22 @@ Template.charts.onRendered(function() {
     };
 
     var data3 = [{
-            value: 300,
+            value: random(),
             color: "#F7464A",
             highlight: "#FF5A5E",
             label: "Red"
         }, {
-            value: 50,
+            value: random(),
             color: "#46BFBD",
             highlight: "#5AD3D1",
             label: "Green"
         }, {
-            value: 100,
+            value: random(),
             color: "#FDB45C",
             highlight: "#FFC870",
             label: "Yellow"
         }, {
-            value: 40,
+            value: random(),
             color: "#949FB1",
             highlight: "#A8B3C5",
             label: "Grey"
@@ -189,19 +189,19 @@ Template.charts.onRendered(function() {
     ];
     var data4 = [
     {
-        value: 300,
+        value: random(),
         color:"#F7464A",
         highlight: "#FF5A5E",
         label: "Red"
     },
     {
-        value: 50,
+        value: random(),
         color: "#46BFBD",
         highlight: "#5AD3D1",
         label: "Green"
     },
     {
-        value: 100,
+        value: random(),
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Yellow"
@@ -227,21 +227,26 @@ Template.charts.onRendered(function() {
 
 Template.moreCharts.onRendered(function() {
     var ctx  = document.getElementById("myChart").getContext("2d");
+
+    var rand1 = random();
+    var rand2 = random();
+    var rand3 = random();
+    console.log(rand1, rand2, rand3);
     var data = [
     {
-        value: 300,
+        value: rand1,
         color:"#F7464A",
         highlight: "#FF5A5E",
         label: "Red"
     },
     {
-        value: 50,
+        value: rand2,
         color: "#46BFBD",
         highlight: "#5AD3D1",
         label: "Green"
     },
     {
-        value: 100,
+        value: rand3,
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Yellow"
@@ -249,3 +254,7 @@ Template.moreCharts.onRendered(function() {
     ]
     var myPieChart = new Chart(ctx).Pie(data);
 });
+
+function random() {
+    return Math.floor((Math.random() * 100) + 1);
+}
