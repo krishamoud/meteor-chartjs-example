@@ -124,7 +124,7 @@ Template.charts.onRendered(function() {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40]
+            data: [random(), random(), random(), random(), random(), random(), random()]
         }, {
             label: "My Second dataset",
             fillColor: "rgba(151,187,205,0.2)",
@@ -133,7 +133,7 @@ Template.charts.onRendered(function() {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
+            data: [random(), random(), random(), random(), random(), random(), random()]
         }]
     };
     var data2 = {
@@ -146,7 +146,7 @@ Template.charts.onRendered(function() {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 90, 81, 56, 55, 40]
+            data: [random(), random(), random(), random(), random(), random(), random()]
         }, {
             label: "My Second dataset",
             fillColor: "rgba(151,187,205,0.2)",
@@ -155,7 +155,7 @@ Template.charts.onRendered(function() {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 96, 27, 100]
+            data: [random(), random(), random(), random(), random(), random(), random()]
         }]
     };
 
@@ -180,7 +180,7 @@ Template.charts.onRendered(function() {
             highlight: "#A8B3C5",
             label: "Grey"
         }, {
-            value: 120,
+            value: random(),
             color: "#4D5360",
             highlight: "#616774",
             label: "Dark Grey"
