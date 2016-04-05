@@ -1,4 +1,2 @@
-From meteorhacks/meteord
+FROM meteorhacks/meteord
 MAINTAINER Kris Hamoud
-
-EXPOSE 80
